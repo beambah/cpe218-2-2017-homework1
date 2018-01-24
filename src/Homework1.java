@@ -1,10 +1,8 @@
 import java.util.Stack;
 
-public class Homework1 {
-
-    public static Node Tonmai;
+public class Homework1{
     public static Stack<Character> Tree = new Stack<Character>();
-
+    public static Node Tonmai;
     public static void main(String[] args) {
         // Begin of arguments input sample
         if (args.length > 0) {
@@ -24,7 +22,7 @@ public class Homework1 {
         Tonmai = new Node(Tree.pop());
         infix(Tonmai);
         inorder(Tonmai);
-        System.out.print("=" + calculate(Tonmai));
+        System.out.println("="+calculate(Tonmai));
     }
 
 
@@ -55,7 +53,6 @@ public class Homework1 {
         }
     }
 
-
     public static int calculate(Node ccl) {
         if (ccl == null) {
             return 0;
@@ -73,5 +70,10 @@ public class Homework1 {
             return calculate(ccl.Left) / calculate(ccl.Right);
         } else return Integer.parseInt(ccl.T_ree.toString());
     }
+
+
+
 }
+
+
 
